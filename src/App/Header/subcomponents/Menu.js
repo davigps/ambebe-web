@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPhone } from "react-icons/fa";
+import { FaArrowAltCircleDown } from "react-icons/fa";
 
 import {
   MenuNormal,
@@ -32,7 +32,7 @@ function Menu({ links, actionButton, forwardRef, useSmall }) {
             <MenuBar style={clicked ? bar3 : {}} />
           </SmallMenu>
           <ActionButton to={actionButton.to}>
-            <FaPhone size={25} />
+            <FaArrowAltCircleDown size={25} />
           </ActionButton>
           <SmallMenuRoutes
             links={links}
@@ -51,7 +51,7 @@ function Menu({ links, actionButton, forwardRef, useSmall }) {
           {actionButton ? (
             <ActionButton to={actionButton.to}>
               {actionButton.name}
-              <FaPhone size={25} style={{ marginLeft: "10px" }} />
+              <FaArrowAltCircleDown size={25} style={{ marginLeft: "10px" }} />
             </ActionButton>
           ) : (
             ""

@@ -1,21 +1,38 @@
 import React from "react";
 
 import Header from "../../App/Header";
+import logoamarela from "../../assets/logo-amarela.png";
 // import { Container } from './styles';
 
 function Home() {
   return (
     <>
       <Header
-        title="Ambebe"
+        logo={logoamarela}
         links={[
+          {
+            name: "Início",
+            to: "/#inicio",
+          },
+          {
+            name: "Sobre a AMBEBE",
+            to: "/#sobre",
+          },
+          {
+            name: "Início",
+            to: "/#locais",
+          },
           {
             name: "Contato",
             to: "/#contato",
           },
         ]}
+        actionButton={{
+          name: "Download",
+          to: "/#inicio",
+        }}
       />
-      <div>
+      <div style={{ marginTop: "100px" }}>
         <h1>Home</h1>
       </div>
     </>

@@ -16,7 +16,7 @@ export const Container = styled.header`
   -webkit-box-shadow: 0px 7px 17px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 17px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 7px 17px -7px rgba(0, 0, 0, 0.75);
-  background-color: white;
+  background-color: black;
 
   ${MEDIA} {
     height: 60px;
@@ -30,7 +30,7 @@ export const LogoSpace = styled.a`
   margin-right: auto;
 
   img {
-    max-width: 120px;
+    max-width: 200px;
   }
 
   ${MEDIA} {
@@ -45,7 +45,7 @@ export const LogoSpace = styled.a`
 `;
 
 export const Title = styled.h1`
-  color: #c90225;
+  color: white;
   font-size: 50px;
   font-weight: 400;
 

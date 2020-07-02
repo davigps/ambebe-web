@@ -1,10 +1,9 @@
 import React from "react";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 
 import App from "./App";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
-import Login from "./pages/Login";
 
 function Routes() {
   return (
@@ -12,8 +11,8 @@ function Routes() {
       <App>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
           <Route path="/admin" component={Admin} />
+          <Route path="/*" component={() => <Redirect to="/" />} />
         </Switch>
       </App>
     </BrowserRouter>

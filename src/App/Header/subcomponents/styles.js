@@ -9,10 +9,10 @@ export const MenuNormal = styled.menu`
 `;
 
 export const MenuNormalItem = styled.a`
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
-  color: #c90225;
+  color: white;
 
   display: flex;
   align-items: center;
@@ -21,7 +21,8 @@ export const MenuNormalItem = styled.a`
   margin-right: 3vw;
 
   &:hover {
-    color: #ccc;
+    filter: brightness(70%);
+    cursor: pointer;
   }
 `;
 
@@ -29,15 +30,15 @@ export const ActionButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: black;
   margin-right: 3vw;
 
-  background-color: #c90225;
-  padding: 20px 40px;
-  border-radius: 70px;
+  background-color: #ffcc29;
+  padding: 15px 30px;
+  border-radius: 10px;
 
   img {
     margin-left: 20px;
@@ -46,6 +47,7 @@ export const ActionButton = styled.a`
 
   &:hover {
     filter: brightness(70%);
+    cursor: pointer;
   }
 
   ${MEDIA} {
@@ -75,7 +77,7 @@ export const SmallMenu = styled.button`
 export const MenuBar = styled.div`
   width: 35px;
   height: 5px;
-  background-color: #c90225;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 `;
@@ -88,7 +90,7 @@ export const MenuSlide = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c90225;
+  background-color: white;
   border-top: solid 1vh #a50003;
   ${MEDIA} {
     top: 60px;
