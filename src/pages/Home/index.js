@@ -1,8 +1,10 @@
 import React from "react";
 
 import Header from "../../App/Header";
+import Footer from "../../App/Footer";
+import DownloadBox from "./components/DownloadBox";
 import logoamarela from "../../assets/logo-amarela.png";
-// import { Container } from './styles';
+import { Container, WhiteBox } from "./styles";
 
 function Home() {
   return (
@@ -32,9 +34,11 @@ function Home() {
           to: "/#inicio",
         }}
       />
-      <div style={{ marginTop: "100px" }}>
-        <h1>Home</h1>
-      </div>
+      <Container>
+        <WhiteBox />
+        <DownloadBox />
+        <Footer />
+      </Container>
     </>
   );
 }
