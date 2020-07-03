@@ -39,8 +39,12 @@ export const LogoSpace = styled.a`
     left: 40%;
 
     img {
-      max-width: 60px;
+      max-width: 80px;
     }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 `;
 

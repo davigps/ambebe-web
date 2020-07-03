@@ -44,7 +44,7 @@ function Menu({ links, actionButton, forwardRef, useSmall }) {
       ) : (
         <MenuNormal ref={forwardRef}>
           {links.map((link) => (
-            <MenuNormalItem key={link.name} to={link.to}>
+            <MenuNormalItem key={Math.random()} to={link.to}>
               {link.name}
             </MenuNormalItem>
           ))}

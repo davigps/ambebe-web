@@ -90,8 +90,8 @@ export const MenuSlide = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  border-top: solid 1vh #a50003;
+  background-color: black;
+  border-top: solid 1vh #ffcc29;
   ${MEDIA} {
     top: 60px;
   }
@@ -107,7 +107,7 @@ export const MenuSlideItem = styled.a`
   color: white;
 
   width: 100%;
-  border-bottom: solid 0.5vh #a50003;
+  border-bottom: solid 0.5vh #ffcc29;
 
   padding: 2.3vh 0;
   &:hover {

@@ -19,7 +19,7 @@ function Home() {
             to: "/#sobre",
           },
           {
-            name: "Início",
+            name: "Locais",
             to: "/#locais",
           },
           {
