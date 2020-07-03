@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA } from "../../App";
 
 export const Container = styled.div`
   color: white;
@@ -10,4 +11,8 @@ export const Container = styled.div`
   padding: 20px 0;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  ${MEDIA} {
+    font-size: 14px;
+  }
+`;
