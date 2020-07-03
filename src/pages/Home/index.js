@@ -2,9 +2,10 @@ import React from "react";
 
 import Header from "../../App/Header";
 import Footer from "../../App/Footer";
+import HomeSection from "./components/HomeSection";
 import DownloadBox from "./components/DownloadBox";
 import logoamarela from "../../assets/logo-amarela.png";
-import { Container, WhiteBox } from "./styles";
+import { Container } from "./styles";
 
 function Home() {
   return (
@@ -35,7 +36,7 @@ function Home() {
         }}
       />
       <Container>
-        <WhiteBox />
+        <HomeSection />
         <DownloadBox />
         <Footer />
       </Container>
