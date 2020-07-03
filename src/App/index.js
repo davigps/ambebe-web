@@ -6,3 +6,5 @@ function App({ children }) {
 }
 
 export default App;
+
+export const MEDIA = "@media only screen and (max-width: 900px)";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MEDIA = "@media only screen and (max-width: 900px)";
+import { MEDIA } from "../../App";
 
 export const Container = styled.header`
   z-index: 1;
