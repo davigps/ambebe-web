@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { MEDIA } from "../../../App";
-import cerveja from "../../../assets/cerveja.jpg";
-import logo from "../../../assets/logo-branca.png";
+import { MEDIA } from '../../../App';
+import cerveja from '../../../assets/cerveja.jpg';
+import logo from '../../../assets/logo-branca.png';
 
 function HomeSection() {
   return (

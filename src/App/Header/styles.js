@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA } from "../../App";
+import { MEDIA } from '..';
 
 export const Container = styled.header`
   z-index: 1;

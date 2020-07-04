@@ -1,10 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 
-import Menu from "./subcomponents/Menu";
+import Menu from './subcomponents/Menu';
 
-import { Container, Title, LogoSpace } from "./styles";
+import { Container, Title, LogoSpace } from './styles';
 
-function Header({ logo, title, links, actionButton }) {
+function Header({
+  logo, title, links, actionButton,
+}) {
   const [menuSize, setMenuSize] = useState(null);
   const [useSmall, setUseSmall] = useState(false);
 
@@ -27,14 +29,14 @@ function Header({ logo, title, links, actionButton }) {
       }
     };
 
-    if (typeof window != `undefined`) window.onresize = createMenu;
+    if (typeof window !== 'undefined') window.onresize = createMenu;
     createMenu();
   }, [menuSize, useSmall]);
 
   return (
     <Container ref={containerElem}>
       <LogoSpace ref={logoSpace} to="/#inicio">
-        {logo ? <img src={logo} alt="Logo" /> : ""}
+        {logo ? <img src={logo} alt="Logo" /> : ''}
         <Title>{title}</Title>
       </LogoSpace>
 

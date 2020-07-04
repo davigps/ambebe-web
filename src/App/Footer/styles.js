@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { MEDIA } from "../../App";
+import styled from 'styled-components';
+import { MEDIA } from '..';
 
 export const Container = styled.div`
   color: white;

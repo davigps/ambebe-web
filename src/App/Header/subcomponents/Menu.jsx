@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaArrowAltCircleDown } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaArrowAltCircleDown } from 'react-icons/fa';
 
 import {
   MenuNormal,
@@ -7,20 +7,22 @@ import {
   ActionButton,
   SmallMenu,
   MenuBar,
-} from "./styles";
+} from './styles';
 
-import SmallMenuRoutes from "./SmallMenuRoutes";
+import SmallMenuRoutes from './SmallMenuRoutes';
 
-function Menu({ links, actionButton, forwardRef, useSmall }) {
+function Menu({
+  links, actionButton, forwardRef, useSmall,
+}) {
   const [clicked, setClicked] = useState(false);
 
   const handleMenu = () => {
     setClicked(!clicked);
   };
 
-  const bar1 = { transform: "rotate(-45deg) translate(-9px, 6px)" };
+  const bar1 = { transform: 'rotate(-45deg) translate(-9px, 6px)' };
   const bar2 = { opacity: 0 };
-  const bar3 = { transform: "rotate(45deg) translate(-8px, -8px)" };
+  const bar3 = { transform: 'rotate(45deg) translate(-8px, -8px)' };
 
   return (
     <>
@@ -51,10 +53,10 @@ function Menu({ links, actionButton, forwardRef, useSmall }) {
           {actionButton ? (
             <ActionButton to={actionButton.to}>
               {actionButton.name}
-              <FaArrowAltCircleDown size={25} style={{ marginLeft: "10px" }} />
+              <FaArrowAltCircleDown size={25} style={{ marginLeft: '10px' }} />
             </ActionButton>
           ) : (
-            ""
+            ''
           )}
         </MenuNormal>
       )}

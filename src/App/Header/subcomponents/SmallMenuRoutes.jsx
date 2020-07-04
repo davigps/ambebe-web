@@ -1,17 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { MenuSlide, MenuSlideItem } from "./styles";
+import { MenuSlide, MenuSlideItem } from './styles';
 
 const SeeClick = ({ children, onPress }) => (
   <button
+    type="button"
     onClick={onPress}
-    style={{ background: "none", border: "none", width: "100%" }}
+    style={{ background: 'none', border: 'none', width: '100%' }}
   >
     {children}
   </button>
 );
 
-const SmallMenuRoutes = ({ clicked, links, actionButton, onPress }) => (
+const SmallMenuRoutes = ({
+  clicked, links, actionButton, onPress,
+}) => (
   <>
     {clicked ? (
       <MenuSlide>
@@ -29,7 +32,7 @@ const SmallMenuRoutes = ({ clicked, links, actionButton, onPress }) => (
         )}
       </MenuSlide>
     ) : (
-      ""
+      ''
     )}
   </>
 );

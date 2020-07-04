@@ -1,7 +1,7 @@
-import React from "react";
-import { FaArrowCircleDown } from "react-icons/fa";
-import styled from "styled-components";
-import { MEDIA } from "../../../App";
+import React from 'react';
+import { FaArrowCircleDown } from 'react-icons/fa';
+import styled from 'styled-components';
+import { MEDIA } from '../../../App';
 
 function DownloadBox() {
   return (
@@ -14,7 +14,9 @@ function DownloadBox() {
         </DownloadText>
       </DownloadCall>
       <DownloadBtn>
-        Download <FaArrowCircleDown />
+        Download
+        {' '}
+        <FaArrowCircleDown />
       </DownloadBtn>
       <DownloadCall>
         <DownloadTitle>Não perca tempo!</DownloadTitle>
