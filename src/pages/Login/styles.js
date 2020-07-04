@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { BsLock } from 'react-icons/bs';
 import { MdBusiness } from 'react-icons/md';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 import login from '../../assets/login.jpg';
 import { MEDIA } from '../../App';
@@ -99,4 +100,9 @@ export const ModalText = styled.p`
   align-items: center; 
   justify-content: center; 
   font-size: 18px;
+`;
+
+export const Loading = styled(AiOutlineLoading3Quarters)`
+  font-size: 60px;
+  animation: spin 1s linear infinite;
 `;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Modal } from 'react-responsive-modal';
 
 import {
@@ -13,22 +14,49 @@ import {
   Business,
   Lock,
   ModalText,
+  Loading,
 } from './styles';
 import logonormal from '../../assets/logo-normal.png';
 
 import firebase from '../../services/firebase';
+import api from '../../services/api';
+import { login } from '../../services/auth';
 
 function Login() {
+  const history = useHistory();
+
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    firebase.signInWithEmailAndPassword(email, password).catch(() => {
-      setError('Ocorreu um erro ao fazer o login, verifique suas credenciais.');
-    });
+    setLoading(true);
+    const firebaseResponse = await firebase.signInWithEmailAndPassword(email, password)
+      .catch(() => {
+        setLoading(false);
+        setError('Ocorreu um erro ao fazer o login, verifique suas credenciais.');
+      });
+
+    if (firebaseResponse) {
+      const { user } = firebaseResponse;
+
+      try {
+        const { token, bar } = await api.post('/bar', {
+          email: user.email,
+        });
+
+        login(token, bar);
+        setLoading(false);
+        history.push('/admin');
+      } catch (err) {
+        setLoading(false);
+        setError('Não foi possível realizar o login, tente novamente mais tarde!');
+      }
+    }
+    setLoading(false);
   };
 
   return (
@@ -57,10 +85,17 @@ function Login() {
         </Description>
       </LoginContainer>
 
-      <Modal open={error} onClose={() => setError('')} center>
-        <ModalText>
-          {error}
-        </ModalText>
+      <Modal open={error || loading} onClose={() => setError('')} center showCloseIcon={!loading}>
+        {
+          error
+            ? (
+              <ModalText>
+                {error}
+              </ModalText>
+            ) : (
+              <Loading />
+            )
+        }
       </Modal>
     </Container>
   );

@@ -17,6 +17,12 @@ a {
   padding: 0px;
 }
 
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
 .app-content {
   max-width: 1920px !important;
   min-height: 90vh !important;
