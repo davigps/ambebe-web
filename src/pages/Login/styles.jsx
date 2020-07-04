@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { BsFillPersonFill, BsLock } from 'react-icons/bs';
+import { BsLock } from 'react-icons/bs';
+import { MdBusiness } from 'react-icons/md';
 
 import login from '../../assets/login.jpg';
 import { MEDIA } from '../../App';
@@ -87,6 +88,6 @@ export const SignInBtn = styled.button`
   }
 `;
 
-export const Person = styled(BsFillPersonFill)``;
+export const Business = styled(MdBusiness)``;
 
 export const Lock = styled(BsLock)``;

@@ -9,7 +9,7 @@ import {
   InputContainer, 
   Input, 
   SignInBtn,
-  Person,
+  Business,
   Lock, 
 } from './styles';
 import logonormal from '../../assets/logo-normal.png';
@@ -23,7 +23,7 @@ function Login() {
 
         <Form>
           <InputContainer>
-            <Person />
+            <Business />
             <Input placeholder="Identificador" />
           </InputContainer>
 
