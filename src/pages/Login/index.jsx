@@ -44,11 +44,12 @@ function Login() {
       const { user } = firebaseResponse;
 
       try {
-        const { token, bar } = await api.post('/bar', {
+        const response = await api.post('/bar', {
           email: user.email,
         });
+        const { token, barExist } = response.data;
 
-        login(token, bar);
+        login(token, barExist);
         setLoading(false);
         history.push('/admin');
       } catch (err) {
