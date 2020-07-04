@@ -1,9 +1,13 @@
 import React from "react";
 
-// import { Container } from './styles';
+import { Container, LoginContainer } from './styles';
 
 function Login() {
-  return <div>Login</div>;
+  return (
+    <Container>
+      <LoginContainer></LoginContainer>
+    </Container>
+  );
 }
 
 export default Login;
