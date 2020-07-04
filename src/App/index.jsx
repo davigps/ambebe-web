@@ -1,4 +1,5 @@
 import React from 'react';
+import 'react-responsive-modal/styles.css';
 import './App.css';
 
 function App({ children }) {

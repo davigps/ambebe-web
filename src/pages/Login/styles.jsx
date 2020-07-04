@@ -46,7 +46,7 @@ export const Logo = styled.img`
 export const Description = styled.p`
   text-align: center;
   font-size: 25px;
-  ${({ color }) => color ? `color: ${color}` : ''}
+  ${({ color }) => (color ? `color: ${color}` : '')}
 
   ${MEDIA} {
     font-size: 20px;
@@ -91,3 +91,12 @@ export const SignInBtn = styled.button`
 export const Business = styled(MdBusiness)``;
 
 export const Lock = styled(BsLock)``;
+
+export const ModalText = styled.p`
+  width: 300px;
+  height: 150px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 18px;
+`;
