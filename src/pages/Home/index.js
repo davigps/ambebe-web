@@ -18,7 +18,7 @@ function Home() {
             to: "/#inicio",
           },
           {
-            name: "Sobre a AMBEBE",
+            name: "Sobre o AMBEBE",
             to: "/#sobre",
           },
           {
