@@ -21,7 +21,7 @@ function Admin() {
   const getCheckouts = (i) => {
     if (i <= checkoutsArray.length) {
       setCheckouts(checkoutsArray.slice(0, i));
-      setTimeout(() => getCheckouts(i + 1), 60 * 1000);
+      setTimeout(() => getCheckouts(i + 1), 30 * 1000);
     }
   };
 
