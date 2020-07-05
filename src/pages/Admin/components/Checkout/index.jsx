@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Container, Info, Person, Text, Clock, Product,
+  Container, Info, Person, Text, Clock, Product, Exclude,
 } from './styles';
 
 function Checkout({ name, time, orders }) {
@@ -9,6 +9,7 @@ function Checkout({ name, time, orders }) {
 
   return (
     <Container>
+      <Exclude color="#d83904" />
       <Info>
         <Person />
         <Text>{name}</Text>

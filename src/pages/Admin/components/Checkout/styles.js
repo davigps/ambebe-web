@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FaBeer } from 'react-icons/fa';
-import { MdPerson, MdAlarm } from 'react-icons/md';
+import { MdPerson, MdAlarm, MdCancel } from 'react-icons/md';
 
 export const Container = styled.div`
   background-color: #eee;
@@ -33,4 +33,8 @@ export const Clock = styled(MdAlarm)`
 `;
 
 export const Product = styled(FaBeer)`
+`;
+
+export const Exclude = styled(MdCancel)`
+  align-self: flex-end;
 `;
