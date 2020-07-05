@@ -5,7 +5,20 @@ export default [
         name: 'Davi Sousa',
       },
     },
-    orders: ['Skol', 'Brahma'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 5,
+      },
+      {
+        name: 'Pitú',
+        quantity: 15,
+      },
+    ],
   },
   {
     checkin: {
@@ -13,7 +26,20 @@ export default [
         name: 'Arthur Azevedo',
       },
     },
-    orders: ['Skol', 'Brahma', 'Skol Beats'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -21,7 +47,20 @@ export default [
         name: 'Fábio Júnior',
       },
     },
-    orders: ['', '', '', ''],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -29,7 +68,20 @@ export default [
         name: 'Matheus Gonzaga',
       },
     },
-    orders: ['Skol', 'Brahma', '', '', '', ''],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -37,7 +89,20 @@ export default [
         name: 'Arthur Azevedo',
       },
     },
-    orders: ['Skol', 'Brahma', 'Skol Beats'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -45,7 +110,20 @@ export default [
         name: 'Davi Sousa',
       },
     },
-    orders: ['Skol', 'Brahma', 'Pitu'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -53,7 +131,20 @@ export default [
         name: 'Davi Sousa',
       },
     },
-    orders: ['Skol', 'Brahma'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -61,7 +152,20 @@ export default [
         name: 'Arthur Azevedo',
       },
     },
-    orders: ['Skol', 'Brahma', 'Skol Beats'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
   {
     checkin: {
@@ -69,6 +173,19 @@ export default [
         name: 'Davi Sousa',
       },
     },
-    orders: ['Skol', 'Brahma', 'Pitu'],
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
+    ],
   },
 ];

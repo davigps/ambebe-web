@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'react-responsive-modal';
 
 import {
-  Container, Header, PersonContainer, ClockContainer, Person, Text, Clock,
+  Container, Header, InfoContainer, Person, Text, Clock,
   List, Product, Quantity, Confirm, ConfirmButton,
 } from './styles';
 
@@ -13,21 +13,21 @@ function CheckoutModal({
     <Modal open={open} onClose={onClose} center>
       <Container>
         <Header>
-          <PersonContainer>
+          <InfoContainer>
             <Person />
             <Text>{name}</Text>
-          </PersonContainer>
+          </InfoContainer>
 
-          <ClockContainer>
+          <InfoContainer>
             <Clock />
             <Text>{time}</Text>
-          </ClockContainer>
+          </InfoContainer>
         </Header>
 
         <List>
           {
             orders.map((item) => (
-              <Product>
+              <Product key={Math.random()}>
                 <Text>{item.name}</Text>
                 <Quantity>
                   x
