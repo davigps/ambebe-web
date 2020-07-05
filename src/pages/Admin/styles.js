@@ -12,4 +12,7 @@ export const Container = styled.div`
 export const Checkouts = styled.section`
   flex: 1;
   background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 40px 0;
 `;

@@ -7,6 +7,7 @@ import Header from './components/Header';
 import CheckoutsLabel from './components/CheckoutsLabel';
 import Checkout from './components/Checkout';
 import { Container, Checkouts } from './styles';
+import checkoutsArray from './checkouts';
 
 function Admin() {
   const history = useHistory();
@@ -24,6 +25,7 @@ function Admin() {
     // io.on('notification', (data) => {
     //   io.emit('confirmation', data);
     // });
+    setCheckouts(checkoutsArray);
 
     const user = getUser();
 
