@@ -18,6 +18,13 @@ function Admin() {
   const [city, setCity] = useState('');
   const [checkouts, setCheckouts] = useState([]);
 
+  const getCheckouts = (i) => {
+    if (i <= checkoutsArray.length) {
+      setCheckouts(checkoutsArray.slice(0, i));
+      setTimeout(() => getCheckouts(i + 1), 60 * 1000);
+    }
+  };
+
   useEffect(() => {
     // const io = SocketClient(process.env.REACT_APP_API_URL);
     // setSocket(io);
@@ -25,13 +32,13 @@ function Admin() {
     // io.on('notification', (data) => {
     //   console.log(data);
     // });
-    setCheckouts(checkoutsArray);
-
     const user = getUser();
 
     setName(user.name);
     setEmail(user.email);
     setCity(user.city);
+
+    getCheckouts(1);
   }, []);
 
   return (
