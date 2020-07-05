@@ -12,6 +12,8 @@ export const Container = styled.header`
 
   border-bottom-right-radius: 600px;
   border-bottom-left-radius: 600px;
+
+  margin-bottom: 80px;
 `;
 
 export const Main = styled.div`
