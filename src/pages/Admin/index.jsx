@@ -12,7 +12,7 @@ import checkoutsArray from './checkouts';
 function Admin() {
   const history = useHistory();
 
-  // const [socket, setSocket] = useState(null);
+  const [socket, setSocket] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
@@ -42,6 +42,7 @@ function Admin() {
         city={city}
         onLogout={() => {
           logout();
+          socket.disconnect();
           history.push('/login');
         }}
       />
@@ -53,7 +54,12 @@ function Admin() {
             checkin.time = new Date();
 
             return (
-              <Checkout name={checkin.user.name} time={checkin.time} orders={orders} />
+              <Checkout
+                key={Math.random()}
+                name={checkin.user.name}
+                time={checkin.time}
+                orders={orders}
+              />
             );
           })
         }

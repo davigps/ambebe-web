@@ -1,36 +1,42 @@
 import React from 'react';
 
 import {
-  Container, Info, Person, Text, Clock, Product, Exclude,
+  Container, InfoContainer, Info, Person, Text, Clock, Product, Exclude,
 } from './styles';
 
 function Checkout({ name, time, orders }) {
-  const date = `${time.getHours()}:${time.getMinutes()}`;
-
+  const date = `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`;
   return (
-    <Container>
-      <Exclude color="#d83904" />
-      <Info>
-        <Person />
-        <Text>{name}</Text>
-      </Info>
-      <Info>
-        <Clock />
-        <Text>
-          Horário:
-          {' '}
-          {date}
-        </Text>
-      </Info>
-      <Info>
-        <Product />
-        <Text>
-          {orders.length}
-          {' '}
-          Produtos
-        </Text>
-      </Info>
-    </Container>
+    <>
+      <Container>
+        <InfoContainer>
+          <Info>
+            <Person />
+            <Text>{name}</Text>
+          </Info>
+          <Info>
+            <Clock />
+            <Text>
+              Horário:
+              {' '}
+              {date}
+            </Text>
+          </Info>
+          <Info>
+            <Product />
+            <Text>
+              {orders.length}
+              {' '}
+              Produtos
+            </Text>
+          </Info>
+        </InfoContainer>
+        <Exclude>
+          Dispensar
+        </Exclude>
+      </Container>
+
+    </>
   );
 }
 
