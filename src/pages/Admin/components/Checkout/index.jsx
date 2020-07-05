@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import CheckoutModal from '../CheckoutModal';
 import {
   Container, InfoContainer, Info, Person, Text, Clock, Product, Exclude,
 } from './styles';
 
-function Checkout({ data }) {
-  const [open, setOpen] = useState(false);
-
+function Checkout({ data, onClick }) {
   const { checkin, orders } = data;
   const { user, time } = checkin;
 
-  const date = `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`;
+  data.checkin.time = `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`;
 
   return (
     <Container>
-      <InfoContainer type="button" onClick={() => setOpen(true)}>
+      <InfoContainer type="button" onClick={() => onClick(data)}>
         <Info>
           <Person />
           <Text>{user.name}</Text>
@@ -25,7 +22,7 @@ function Checkout({ data }) {
           <Text>
             Horário:
             {' '}
-            {date}
+            {data.checkin.time}
           </Text>
         </Info>
         <Info>
@@ -40,15 +37,6 @@ function Checkout({ data }) {
       <Exclude type="button">
         Dispensar
       </Exclude>
-
-      <CheckoutModal
-        open={open}
-        onClose={() => setOpen(false)}
-        name={user.name}
-        time={date}
-        orders={orders}
-        onConfirm={() => console.log('confirmado')}
-      />
     </Container>
   );
 }

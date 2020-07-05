@@ -7,8 +7,11 @@ import {
 } from './styles';
 
 function CheckoutModal({
-  open, onClose, name, time, orders, onConfirm,
+  open, onClose, data, onConfirm,
 }) {
+  const { checkin, orders } = data;
+  const { name, time } = checkin.user;
+
   return (
     <Modal open={open} onClose={onClose} center>
       <Container>

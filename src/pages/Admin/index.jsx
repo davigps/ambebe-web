@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-// import SocketClient from 'socket.io-client';
+// import SocketIoClient from 'socket.io-client';
 import { getUser, logout } from '../../services/auth';
 
 import Header from './components/Header';
 import CheckoutsLabel from './components/CheckoutsLabel';
 import Checkout from './components/Checkout';
+import CheckoutModal from './components/CheckoutModal';
 import { Container, Checkouts } from './styles';
 import checkoutsArray from './checkouts';
 
@@ -13,10 +14,12 @@ function Admin() {
   const history = useHistory();
 
   // const [socket, setSocket] = useState(null);
+  const [open, setOpen] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
   const [checkouts, setCheckouts] = useState([]);
+  const [data, setData] = useState(null);
 
   const getCheckouts = (i) => {
     if (i <= checkoutsArray.length) {
@@ -26,7 +29,7 @@ function Admin() {
   };
 
   useEffect(() => {
-    // const io = SocketClient(process.env.REACT_APP_API_URL);
+    // const io = SocketIoClient(process.env.REACT_APP_API_URL);
     // setSocket(io);
 
     // io.on('notification', (data) => {
@@ -57,18 +60,35 @@ function Admin() {
       <CheckoutsLabel />
       <Checkouts>
         {
-          checkouts.map((data) => {
-            data.checkin.time = new Date();
+          checkouts.map((item) => {
+            item.checkin.time = new Date();
 
             return (
               <Checkout
                 key={Math.random()}
-                data={data}
+                data={item}
+                onClick={(checkoutData) => {
+                  setData(checkoutData);
+                  setOpen(true);
+                }}
               />
             );
           })
         }
       </Checkouts>
+
+      {
+        data
+          ? (
+            <CheckoutModal
+              open={open}
+              onClose={() => setOpen(false)}
+              data={data}
+              onConfirm={() => console.log('confirmado')}
+            />
+          )
+          : ''
+      }
     </Container>
   );
 }
