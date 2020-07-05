@@ -7,16 +7,16 @@ export default [
     },
     orders: [
       {
-        name: 'Skol',
+        name: 'Skol Latinha',
         quantity: 2,
       },
       {
-        name: 'Brahma',
+        name: 'Brahma Duplo Malte',
         quantity: 5,
       },
       {
-        name: 'Pitú',
-        quantity: 15,
+        name: 'Gatorade Tangerina',
+        quantity: 3,
       },
     ],
   },
@@ -27,6 +27,18 @@ export default [
       },
     },
     orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
       {
         name: 'Skol',
         quantity: 2,
@@ -60,6 +72,14 @@ export default [
         name: 'Pitu',
         quantity: 2,
       },
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
     ],
   },
   {
@@ -81,15 +101,18 @@ export default [
         name: 'Pitu',
         quantity: 2,
       },
-    ],
-  },
-  {
-    checkin: {
-      user: {
-        name: 'Arthur Azevedo',
+      {
+        name: 'Skol',
+        quantity: 2,
       },
-    },
-    orders: [
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+      {
+        name: 'Pitu',
+        quantity: 2,
+      },
       {
         name: 'Skol',
         quantity: 2,
@@ -107,7 +130,24 @@ export default [
   {
     checkin: {
       user: {
-        name: 'Davi Sousa',
+        name: 'Joaquim Postal',
+      },
+    },
+    orders: [
+      {
+        name: 'Skol',
+        quantity: 2,
+      },
+      {
+        name: 'Brahma',
+        quantity: 2,
+      },
+    ],
+  },
+  {
+    checkin: {
+      user: {
+        name: 'Eduarda Ferreira',
       },
     },
     orders: [
@@ -121,6 +161,10 @@ export default [
       },
       {
         name: 'Pitu',
+        quantity: 2,
+      },
+      {
+        name: 'Skol',
         quantity: 2,
       },
     ],
