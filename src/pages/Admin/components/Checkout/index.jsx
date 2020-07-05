@@ -4,7 +4,7 @@ import {
   Container, InfoContainer, Info, Person, Text, Clock, Product, Exclude,
 } from './styles';
 
-function Checkout({ data, onClick }) {
+function Checkout({ data, onClick, onDismiss }) {
   const { checkin, orders } = data;
   const { user, time } = checkin;
 
@@ -34,7 +34,7 @@ function Checkout({ data, onClick }) {
           </Text>
         </Info>
       </InfoContainer>
-      <Exclude type="button">
+      <Exclude type="button" onClick={onDismiss}>
         Dispensar
       </Exclude>
     </Container>

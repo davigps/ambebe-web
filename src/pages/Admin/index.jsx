@@ -21,13 +21,6 @@ function Admin() {
   const [checkouts, setCheckouts] = useState([]);
   const [data, setData] = useState(null);
 
-  const getCheckouts = (i) => {
-    if (i <= checkoutsArray.length) {
-      setCheckouts(checkoutsArray.slice(0, i));
-      setTimeout(() => getCheckouts(i + 1), 30 * 1000);
-    }
-  };
-
   useEffect(() => {
     // const io = SocketIoClient(process.env.REACT_APP_API_URL);
     // setSocket(io);
@@ -35,13 +28,14 @@ function Admin() {
     // io.on('notification', (data) => {
     //   console.log(data);
     // });
+    console.log('montei');
     const user = getUser();
 
     setName(user.name);
     setEmail(user.email);
     setCity(user.city);
 
-    getCheckouts(1);
+    setCheckouts(checkoutsArray);
   }, []);
 
   return (
@@ -71,6 +65,7 @@ function Admin() {
                   setData(checkoutData);
                   setOpen(true);
                 }}
+                onDismiss={() => console.log('Dispensado')}
               />
             );
           })
