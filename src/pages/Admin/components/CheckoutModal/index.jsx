@@ -9,8 +9,7 @@ import {
 function CheckoutModal({
   open, onClose, data, onConfirm,
 }) {
-  const { checkin, orders } = data;
-  const { name, time } = checkin.user;
+  const { user, time, products } = data;
 
   return (
     <Modal open={open} onClose={onClose} center>
@@ -18,7 +17,7 @@ function CheckoutModal({
         <Header>
           <InfoContainer>
             <Person />
-            <Text>{name}</Text>
+            <Text>{user}</Text>
           </InfoContainer>
 
           <InfoContainer>
@@ -29,7 +28,7 @@ function CheckoutModal({
 
         <List>
           {
-            orders.map((item) => (
+            products.map((item) => (
               <Product key={Math.random()}>
                 <Text>{item.name}</Text>
                 <Quantity>

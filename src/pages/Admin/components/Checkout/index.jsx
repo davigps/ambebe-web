@@ -5,30 +5,31 @@ import {
 } from './styles';
 
 function Checkout({ data, onClick, onDismiss }) {
-  const { checkin, orders } = data;
-  const { user, time } = checkin;
+  const { user, products, time } = data;
 
-  data.checkin.time = `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`;
+  data.time = typeof time !== 'string' ? (
+    `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`
+  ) : time;
 
   return (
     <Container>
       <InfoContainer type="button" onClick={() => onClick(data)}>
         <Info>
           <Person />
-          <Text>{user.name}</Text>
+          <Text>{user}</Text>
         </Info>
         <Info>
           <Clock />
           <Text>
             Horário:
             {' '}
-            {data.checkin.time}
+            {data.time}
           </Text>
         </Info>
         <Info>
           <Product />
           <Text>
-            {orders.length}
+            {products.length}
             {' '}
             Produtos
           </Text>
