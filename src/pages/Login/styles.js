@@ -3,11 +3,11 @@ import { BsLock } from 'react-icons/bs';
 import { MdBusiness } from 'react-icons/md';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
-import login from '../../assets/login.jpg';
+import bar from '../../assets/bar.jpg';
 import { MEDIA } from '../../App';
 
 export const Container = styled.div`
-  background-image: url(${login});
+  background-image: url(${bar});
   background-attachment: fixed;
   background-size: cover;
 

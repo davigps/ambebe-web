@@ -57,7 +57,6 @@ function Login() {
         setError('Não foi possível realizar o login, tente novamente mais tarde!');
       }
     }
-    setLoading(false);
   };
 
   return (
