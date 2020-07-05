@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-// import SocketClient from 'socket.io-client';
+import SocketClient from 'socket.io-client';
 import { getUser, logout } from '../../services/auth';
 
 import Header from './components/Header';
@@ -19,12 +19,12 @@ function Admin() {
   const [checkouts, setCheckouts] = useState([]);
 
   useEffect(() => {
-    // const io = SocketClient(process.env.REACT_APP_API_URL);
-    // setSocket(io);
+    const io = SocketClient(process.env.REACT_APP_API_URL);
+    setSocket(io);
 
-    // io.on('notification', (data) => {
-    //   io.emit('confirmation', data);
-    // });
+    io.on('notification', (data) => {
+      console.log(data);
+    });
     setCheckouts(checkoutsArray);
 
     const user = getUser();

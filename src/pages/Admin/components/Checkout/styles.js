@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FaBeer } from 'react-icons/fa';
-import { MdPerson, MdAlarm, MdCancel } from 'react-icons/md';
+import { MdPerson, MdAlarm } from 'react-icons/md';
 
 export const Container = styled.div`
   margin: auto;
@@ -49,6 +49,7 @@ export const Product = styled(FaBeer)`
 export const Exclude = styled.div`
   width: 100%;
   color: white;
+  font-weight: bold;
   background-color: #aaa;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
