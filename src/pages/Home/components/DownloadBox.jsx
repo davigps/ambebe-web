@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import { FaArrowCircleDown } from 'react-icons/fa';
 import styled from 'styled-components';
 import { MEDIA } from '../../../App';
@@ -7,7 +8,9 @@ function DownloadBox() {
   return (
     <Download>
       <DownloadCall>
-        <DownloadTitle>Baixe já o nosso aplicativo!</DownloadTitle>
+        <ScrollableAnchor id="baixar">
+          <DownloadTitle>Baixe já o nosso aplicativo!</DownloadTitle>
+        </ScrollableAnchor>
         <DownloadText>
           CONSULTE OS BARES PARCEIROS E COMECE A PARTICIPAR. CADA CERVEJA
           CONSUMIDA AUMENTA A SUA PONTUAÇÃO. JUNTE PONTOS E TROQUE POR BEBIDAS.

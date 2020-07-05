@@ -1,4 +1,5 @@
 import React from 'react';
+import { configureAnchors } from 'react-scrollable-anchor';
 
 import Header from '../../App/Header';
 import Footer from '../../App/Footer';
@@ -7,6 +8,7 @@ import DownloadBox from './components/DownloadBox';
 import logoamarela from '../../assets/logo-amarela.png';
 import { Container } from './styles';
 
+configureAnchors({ offset: -130 });
 function Home() {
   return (
     <>
@@ -21,18 +23,10 @@ function Home() {
             name: 'Sobre o AMBEBE',
             to: '/#sobre',
           },
-          {
-            name: 'Locais',
-            to: '/#locais',
-          },
-          {
-            name: 'Contato',
-            to: '/#contato',
-          },
         ]}
         actionButton={{
           name: 'Download',
-          to: '/#inicio',
+          to: '/#baixar',
         }}
       />
       <Container>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import { MEDIA } from '../../../App';
 import cerveja from '../../../assets/cerveja.jpg';
@@ -9,7 +10,9 @@ function HomeSection() {
   return (
     <Container>
       <TitleContainer>
-        <Title size={45}>FAÇA PARTE DO</Title>
+        <ScrollableAnchor id="inicio">
+          <Title size={45}>FAÇA PARTE DO</Title>
+        </ScrollableAnchor>
         <Logo src={logo} alt="Ambebe" />
         <Title size={30}>O MAIOR CLUBE DE CERVEJEIROS DO BRASIL!</Title>
         <Call>

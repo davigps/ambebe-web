@@ -23,6 +23,7 @@ module.exports = {
     ],
     "rules": {
         "react/prop-types": "off",
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "react/jsx-props-no-spreading": "off",
     }
 };

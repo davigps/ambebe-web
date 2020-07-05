@@ -33,7 +33,7 @@ function Menu({
             <MenuBar style={clicked ? bar2 : {}} />
             <MenuBar style={clicked ? bar3 : {}} />
           </SmallMenu>
-          <ActionButton to={actionButton.to}>
+          <ActionButton href={actionButton.to}>
             <FaArrowAltCircleDown size={25} />
           </ActionButton>
           <SmallMenuRoutes
@@ -46,12 +46,12 @@ function Menu({
       ) : (
         <MenuNormal ref={forwardRef}>
           {links.map((link) => (
-            <MenuNormalItem key={Math.random()} to={link.to}>
+            <MenuNormalItem key={Math.random()} href={link.to}>
               {link.name}
             </MenuNormalItem>
           ))}
           {actionButton ? (
-            <ActionButton to={actionButton.to}>
+            <ActionButton href={actionButton.to}>
               {actionButton.name}
               <FaArrowAltCircleDown size={25} style={{ marginLeft: '10px' }} />
             </ActionButton>

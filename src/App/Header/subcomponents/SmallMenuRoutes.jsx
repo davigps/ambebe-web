@@ -20,12 +20,12 @@ const SmallMenuRoutes = ({
       <MenuSlide>
         {links.map((link) => (
           <SeeClick key={link.name} onPress={onPress}>
-            <MenuSlideItem to={link.to}>{link.name}</MenuSlideItem>
+            <MenuSlideItem href={link.to}>{link.name}</MenuSlideItem>
           </SeeClick>
         ))}
         {actionButton && (
           <SeeClick onPress={onPress}>
-            <MenuSlideItem to={actionButton.to}>
+            <MenuSlideItem href={actionButton.to}>
               {actionButton.name}
             </MenuSlideItem>
           </SeeClick>

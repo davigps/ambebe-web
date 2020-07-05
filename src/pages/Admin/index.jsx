@@ -77,7 +77,10 @@ function Admin() {
                 setData(checkoutData);
                 setOpen(true);
               }}
-              onDismiss={() => removeCheckout(item.id)}
+              onDismiss={() => {
+                socket.emit('dismiss', item);
+                removeCheckout(item.id);
+              }}
             />
           ))
         }
