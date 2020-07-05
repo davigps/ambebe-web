@@ -16,7 +16,7 @@ function HomeSection() {
         <Logo src={logo} alt="Ambebe" />
         <Title size={30}>O MAIOR CLUBE DE CERVEJEIROS DO BRASIL!</Title>
         <Call>
-          <CallBtn>SAIBA MAIS</CallBtn>
+          <CallBtn href="#sobre">SAIBA MAIS</CallBtn>
         </Call>
       </TitleContainer>
     </Container>
@@ -65,7 +65,7 @@ const Call = styled.div`
   }
 `;
 
-const CallBtn = styled.button`
+const CallBtn = styled.a`
   border: solid 2px white;
   background: none;
   color: white;

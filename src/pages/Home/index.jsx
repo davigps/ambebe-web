@@ -4,7 +4,9 @@ import { configureAnchors } from 'react-scrollable-anchor';
 import Header from '../../App/Header';
 import Footer from '../../App/Footer';
 import HomeSection from './components/HomeSection';
+import RankingSection from './components/RankingSection';
 import DownloadBox from './components/DownloadBox';
+import QrCode from './components/QrCode';
 import logoamarela from '../../assets/logo-amarela.png';
 import { Container } from './styles';
 
@@ -31,6 +33,8 @@ function Home() {
       />
       <Container>
         <HomeSection />
+        <RankingSection />
+        <QrCode />
         <DownloadBox />
         <Footer />
       </Container>

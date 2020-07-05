@@ -16,7 +16,10 @@ function DownloadBox() {
           CONSUMIDA AUMENTA A SUA PONTUAÇÃO. JUNTE PONTOS E TROQUE POR BEBIDAS.
         </DownloadText>
       </DownloadCall>
-      <DownloadBtn>
+      <DownloadBtn
+        target="_blank"
+        href="https://drive.google.com/file/d/1IAGymOwbvxGu0htWIyyIYjjXmM2qpPnn/view?usp=sharing"
+      >
         Download
         {' '}
         <FaArrowCircleDown />
@@ -70,8 +73,9 @@ const DownloadText = styled.p`
   }
 `;
 
-const DownloadBtn = styled.button`
+const DownloadBtn = styled.a`
   background-color: #ffcc29;
+  color: black;
   border: none;
   padding: 10px 50px;
   margin: 60px 0;
