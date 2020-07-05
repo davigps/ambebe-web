@@ -76,7 +76,7 @@ function Login() {
             <Input placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
           </InputContainer>
 
-          <SignInBtn type="button" onClick={handleLogin}>Iniciar Sessão</SignInBtn>
+          <SignInBtn type="submit" onClick={handleLogin}>Iniciar Sessão</SignInBtn>
 
         </Form>
 
