@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import CheckoutModal from '../CheckoutModal';
 import {
   Container, InfoContainer, Info, Person, Text, Clock, Product, Exclude,
 } from './styles';
 
 function Checkout({ data }) {
+  const [open, setOpen] = useState(false);
+
   const { checkin, orders } = data;
   const { user, time } = checkin;
 
@@ -12,7 +15,7 @@ function Checkout({ data }) {
 
   return (
     <Container>
-      <InfoContainer>
+      <InfoContainer type="button" onClick={() => setOpen(true)}>
         <Info>
           <Person />
           <Text>{user.name}</Text>
@@ -34,9 +37,18 @@ function Checkout({ data }) {
           </Text>
         </Info>
       </InfoContainer>
-      <Exclude>
+      <Exclude type="button">
         Dispensar
       </Exclude>
+
+      <CheckoutModal
+        open={open}
+        onClose={() => setOpen(false)}
+        name={user.name}
+        time={date}
+        orders={orders}
+        onConfirm={() => console.log('confirmado')}
+      />
     </Container>
   );
 }

@@ -9,15 +9,15 @@ export const Container = styled.div`
   transition: 0.5s;
 
   &:hover {
-    cursor: pointer;
     transform: scale(1.05);
   }
 `;
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled.button`
   background-color: #eee;
   width: 100%;
   min-height: 130px;
+  border: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 10px;
@@ -25,6 +25,11 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 20px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #53ba00;
+  }
 `;
 
 export const Info = styled.div`
@@ -46,16 +51,22 @@ export const Clock = styled(MdAlarm)`
 export const Product = styled(FaBeer)`
 `;
 
-export const Exclude = styled.div`
+export const Exclude = styled.button`
   width: 100%;
   color: white;
+  font-size: 14px;
   font-weight: bold;
   background-color: #aaa;
+  border: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
   &:hover {
+    cursor: pointer;
     background-color: #c63b3b;
   }
 `;

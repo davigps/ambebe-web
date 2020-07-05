@@ -7,10 +7,10 @@ import {
 } from './styles';
 
 function CheckoutModal({
-  name, time, orders, onConfirm,
+  open, onClose, name, time, orders, onConfirm,
 }) {
   return (
-    <Modal>
+    <Modal open={open} onClose={onClose} center>
       <Container>
         <Header>
           <PersonContainer>
