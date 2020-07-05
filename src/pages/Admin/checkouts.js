@@ -4,7 +4,6 @@ export default [
       user: {
         name: 'Davi Sousa',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma'],
   },
@@ -13,7 +12,6 @@ export default [
       user: {
         name: 'Arthur Azevedo',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', 'Skol Beats'],
   },
@@ -22,7 +20,6 @@ export default [
       user: {
         name: 'Fábio Júnior',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['', '', '', ''],
   },
@@ -31,7 +28,6 @@ export default [
       user: {
         name: 'Matheus Gonzaga',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', '', '', '', ''],
   },
@@ -40,7 +36,6 @@ export default [
       user: {
         name: 'Arthur Azevedo',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', 'Skol Beats'],
   },
@@ -49,7 +44,6 @@ export default [
       user: {
         name: 'Davi Sousa',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', 'Pitu'],
   },
@@ -58,7 +52,6 @@ export default [
       user: {
         name: 'Davi Sousa',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma'],
   },
@@ -67,7 +60,6 @@ export default [
       user: {
         name: 'Arthur Azevedo',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', 'Skol Beats'],
   },
@@ -76,7 +68,6 @@ export default [
       user: {
         name: 'Davi Sousa',
       },
-      time: new Date().toUTCString(),
     },
     orders: ['Skol', 'Brahma', 'Pitu'],
   },

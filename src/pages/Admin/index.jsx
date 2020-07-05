@@ -49,9 +49,13 @@ function Admin() {
       <CheckoutsLabel />
       <Checkouts>
         {
-          checkouts.map(({ checkin, orders }) => (
-            <Checkout name={checkin.user.name} time={checkin.time} orders={orders} />
-          ))
+          checkouts.map(({ checkin, orders }) => {
+            checkin.time = new Date();
+
+            return (
+              <Checkout name={checkin.user.name} time={checkin.time} orders={orders} />
+            );
+          })
         }
       </Checkouts>
     </Container>

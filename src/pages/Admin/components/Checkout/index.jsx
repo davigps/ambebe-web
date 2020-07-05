@@ -5,6 +5,8 @@ import {
 } from './styles';
 
 function Checkout({ name, time, orders }) {
+  const date = `${time.getHours()}:${time.getMinutes()}`;
+
   return (
     <Container>
       <Info>
@@ -13,11 +15,19 @@ function Checkout({ name, time, orders }) {
       </Info>
       <Info>
         <Clock />
-        <Text>{time}</Text>
+        <Text>
+          Horário:
+          {' '}
+          {date}
+        </Text>
       </Info>
       <Info>
         <Product />
-        <Text>{orders.length}</Text>
+        <Text>
+          {orders.length}
+          {' '}
+          Produtos
+        </Text>
       </Info>
     </Container>
   );
