@@ -20,17 +20,6 @@ function Admin() {
   const [checkouts, setCheckouts] = useState([]);
   const [data, setData] = useState(null);
 
-  const listenNotification = (socketIo) => {
-    socketIo.on('notification', (notification) => {
-      notification.time = new Date();
-      notification.id = Math.random();
-
-      if (notification.bar_id === getUser().id) {
-        setCheckouts([...checkouts, notification]);
-      }
-    });
-  };
-
   const removeCheckout = (id) => {
     const newCheckouts = checkouts.filter((item) => item.id !== id);
 
@@ -38,15 +27,25 @@ function Admin() {
   };
 
   useEffect(() => {
+    const listenNotification = (socketIo) => {
+      socketIo.on('notification', (notification) => {
+        notification.time = new Date();
+        notification.id = Math.random();
+
+        if (notification.bar_id === getUser().id) {
+          setCheckouts([...checkouts, notification]);
+        }
+      });
+    };
+
     if (socket) {
       listenNotification(socket);
     }
-  }, [checkouts]);
+  }, [checkouts, socket]);
 
   useEffect(() => {
     const io = SocketIoClient(process.env.REACT_APP_API_URL);
     setSocket(io);
-    listenNotification(io);
 
     const user = getUser();
     setName(user.name);
