@@ -104,9 +104,9 @@ Com o aplicativo <b>Ambebe</b>, buscamos tornar a experiência de frequentar bar
 
 
 <div>
-<img src="https://media-exp1.licdn.com/dms/image/C4E03AQFxFlxIba_Fcg/profile-displayphoto-shrink_200_200/0?e=1599696000&v=beta&t=DAGYmDMqen_ME9SJA5ZkrrfbN7JjVuCPlhCmYRqjbGI" width="100">
+<img src="https://hospion.netlify.app/static/media/Matheus.d82fa688.png" width="100">
 <br>
-<b>Matheus Gonaga</b>
+<b>Matheus Gonzaga</b>
 <br>
 <a href="https://www.linkedin.com/in/matheus-g-83176393/"><img src="./assets/linkedin.png" width="25"/></a>
 </div>
